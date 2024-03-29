@@ -17,12 +17,12 @@ public class DoNotEnterThisRoom {
             System.out.println(INTRO);
 
             String selectedOption = MenuDisplay.prompt(OPTIONS);
-            if(selectedOption.equals(OPTION_TRAP_DOOR){
+            if(selectedOption.equals(OPTION_TRAP_DOOR)){
                 onTrapDoor(player);
                 //METHOD FOR DEATH
 
                 // trap door = death, game start over
-            }else
+            }
                 //do we need a break here?
                 //we want to stay in the room and the only real option is trapdoor
             }
