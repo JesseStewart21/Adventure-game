@@ -11,6 +11,9 @@ public class GreenRoom {
     private static final String OPTION_LEAVE = "Leave room";
     private static final String[] OPTIONS = {OPTION_FIGHT, OPTION_LEAVE};
 
+    private final int MAX_HEALTH = 100;
+    private final int MIN_HEALTH = 0;
+
     public void onEnterRoom(Player player) {
 
         while(true) {
@@ -39,6 +42,10 @@ public class GreenRoom {
             int healthDeduction = (int) (Math.random() * 20);
             player.setHealth(player.getHealth() - healthDeduction);
             System.out.println("Oh no! The robot is too fast. Your health is down to " + player.getHealth());
+                if(player.getHealth() == MIN_HEALTH) {
+                    System.out.println("You have died! :(");
+                    System.exit(0);
+                }
         } else {
             System.out.println("You damaged the robot!");
         }
