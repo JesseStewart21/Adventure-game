@@ -1,6 +1,7 @@
 package com.techelevator.rooms;
 
 import com.techelevator.Player;
+import com.techelevator.menu.MenuDisplay;
 
 public class DoNotEnterThisRoom {
 
