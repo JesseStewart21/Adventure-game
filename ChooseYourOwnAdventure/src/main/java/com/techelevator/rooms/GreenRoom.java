@@ -35,6 +35,7 @@ public class GreenRoom {
         boolean robotWins = ((int)(Math.random() * 10)) <= 5;
 
         if(robotWins) {
+            //math.random returns a value between 0 and 1, randomly
             int healthDeduction = (int) (Math.random() * 20);
             player.setHealth(player.getHealth() - healthDeduction);
             System.out.println("Oh no! The robot is too fast. Your health is down to " + player.getHealth());

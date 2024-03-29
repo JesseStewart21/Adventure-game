@@ -5,11 +5,11 @@ import com.techelevator.Player;
 
 public class PurpleRoom {
 
-    private static final String INTRO = "You enter a purple room. You see your friends. There is cake. You have won at life.";
+    private static final String INTRO = "You enter a purple room. You see your friends. There are protein bars. You have won at life.";
 
-    private static final String OPTION_CAKE = "Eat the cake";
+    private static final String OPTION_PROTEIN_BAR = "Eat a protein bar";
     private static final String OPTION_LEAVE = "Leave room";
-    private static final String[] OPTIONS = {OPTION_CAKE, OPTION_LEAVE};
+    private static final String[] OPTIONS = {OPTION_PROTEIN_BAR, OPTION_LEAVE};
 
     public void onEnterRoom(Player player) {
 
@@ -17,8 +17,9 @@ public class PurpleRoom {
 
             System.out.println(INTRO);
 
+
             String selectedOption = MenuDisplay.prompt(OPTIONS);
-            if(selectedOption.equals(OPTION_CAKE)){
+            if(selectedOption.equals(OPTION_PROTEIN_BAR)){
                 onEatCake(player);
             }else if(selectedOption.equals(OPTION_LEAVE)){
                 System.out.println("You exit the room");
@@ -31,7 +32,7 @@ public class PurpleRoom {
     }
 
     private void onEatCake(Player player) {
-        System.out.println("Congratulations! You eat cake and restore your health!");
+        System.out.println("Congratulations! You eat a protein bar and restore your health!");
         player.setHealth( player.getHealth() + 20);
     }
 }
