@@ -20,6 +20,8 @@ public class Player {
             this.health = MAX_HEALTH;
         } else if (health < MIN_HEALTH) {
             this.health = MIN_HEALTH;
+
+
         } else {
             this.health = health;
         }
