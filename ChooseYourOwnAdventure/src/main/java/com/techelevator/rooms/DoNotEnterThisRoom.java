@@ -31,11 +31,10 @@ public class DoNotEnterThisRoom {
     }
 
     private void onTrapDoor(Player player) {
-        boolean trapDoorOpened =
-        if(robotWins) {
+        boolean trapDoorOpened = true;
+        if(trapDoorOpened) {
             //math.random returns a value between 0 and 1, randomly
-            int healthDeduction = (int) (Math.random() * 20);
-            player.setHealth(player.getHealth() = MIN_HEALTH);
+            player.setHealth(MIN_HEALTH);
             System.out.println("You have died! :(");
         }
     }
