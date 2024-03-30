@@ -13,31 +13,32 @@ public class DoNotEnterThisRoom {
 
     public void onEnterRoom(Player player) {
 
-        while(true) {
+        String selectedOption;
+        while (true) {
             System.out.println(INTRO);
 
-            String selectedOption = MenuDisplay.prompt(OPTIONS);
-            if(selectedOption.equals(OPTION_TRAP_DOOR)){
-<<<<<<< HEAD
+            selectedOption = MenuDisplay.prompt(OPTIONS);
+            if (selectedOption.equals(OPTION_TRAP_DOOR)) {
+
                 onTrapDoor(player);
                 //METHOD FOR DEATH
 
                 // trap door = death, game start over
-            }
-=======
-                //trap door = death, game start over
-                onTrapDoor(player);
 
 
-            }
-                if(selectedOption.equals(OPTION_LEAVE)){
-                System.out.println("You cannot leave");
->>>>>>> a1660bbe272c26f01fb4f38499e5fbef390620c3
-                //do we need a break here?
-                //we want to stay in the room and the only real option is trapdoor
-            }
+            //trap door = death, game start over
+
+
 
         }
+        if(selectedOption.equals(OPTION_LEAVE)) {
+            System.out.println("You cannot leave");
+
+            //do we need a break here?
+            //we want to stay in the room and the only real option is trapdoor
+        }
+
+    }
     }
 
     private void onTrapDoor(Player player) {
